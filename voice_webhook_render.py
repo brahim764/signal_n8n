@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/voice", methods=["POST"])
 def voice_webhook():
-    transcription = request.form.get("SpeechResult") or request.form.get("transcription")
+    transcription = request.form.get("SpeechResult") or request.form.get("transcription") 
     caller = request.form.get("From")
 
     if not transcription or not caller:
